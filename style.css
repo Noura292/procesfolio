@@ -11,6 +11,25 @@ div {
     width: 100px;
  }
 
+.parent {
+    position: relative;
+    width: 50%;
+}
+
+.child {
+    position: absolute;
+    top: 85%;
+    bottom: 60;
+    left: 17%;
+    max-width: 40%;
+}
+
+ .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 
 .moving-triangle {
     width: 0;
