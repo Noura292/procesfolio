@@ -6,10 +6,25 @@ p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-div {
-    word-wrap: break-word;
-    width: 100px;
- }
+.background {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    margin-left: 600px;
+    margin-right: auto;
+    width: 30%;
+}
+.container {
+    position: relative;
+    
+}
+.image2 {
+    position: absolute;
+    left: 300px;
+    top: 635px;
+    z-index: 1;
+}
 
 .parent {
     position: relative;
@@ -18,10 +33,10 @@ div {
 
 .child {
     position: absolute;
-    top: 85%;
-    bottom: 60;
+    top: 500px;
     left: 17%;
     max-width: 40%;
+    z-index: 2;
 }
 
  .center {
