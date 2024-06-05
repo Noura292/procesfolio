@@ -6,14 +6,16 @@ p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
+
 .background {
     display: block;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 100px;
     z-index: -1;
-    margin-left: 600px;
+    margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 100%;
 }
 .container {
     position: relative;
@@ -46,6 +48,13 @@ p{
     width: 50%;
   }
 
+  .center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+
 .moving-triangle {
     width: 0;
     height: 0;
@@ -65,3 +74,12 @@ p{
     to {left: 20%;}
 }
 		                
+.foreground {
+    display: block;
+    position: absolute;
+    top: 1000px;
+    z-index: 1;
+    margin-left: 0px;
+    margin-right: auto;
+    width: 30%;
+}
