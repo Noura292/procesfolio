@@ -1,0 +1,693 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Over touwfiguren</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: dimgray;
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+	color: dimgray
+}
+
+.page-title {
+
+font-weight: 700;
+font-size: large;
+margin-top: 0;
+margin-bottom: 0.75em;
+}
+
+h1{
+font: 1em sans-serif;
+color: dimgrey
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="77eafcf4-b850-4bb9-8b77-9b1262d30738" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/preview_beeld_touwfiguren_juist_formaat.png"/></div><h1 class="page-title">Over touwfiguren</h1><p class="page-description"></p></header><div class="page-body"><figure id="79527cd4-daf9-4b4b-a83a-63d247f4ed84" class="image" style="text-align:right"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/Untitled.png"><img style="width:288px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/Untitled.png"/></a></figure><div id="984d4615-8452-4a0a-99da-b1537ee7bad5" class="column-list"><div id="96b7ded3-6bb6-4313-bd9c-d477add59121" style="width:31.25%" class="column"><p id="fffe585c-43cc-48b8-99aa-6e34652b48b5" class="">
+</p><figure id="eb24f849-5de4-412b-be2a-9f060a8499f9" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp.gif"><img style="width:240px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp.gif"/></a></figure></div><div id="e23a8da6-2e28-4c12-ba81-66c00501543f" style="width:68.75%" class="column"><blockquote id="19cdab26-5861-4f73-aaf4-95e8e43318fb" class="">Een artikel dat op website DIG komt te staan waarvoor Astrid illustraties/animaties vroeg.                                                                                          </blockquote><p id="94d6f85b-525c-444f-9533-a494ff2bb597" class="">Het artikel verkent touwfiguren, een spel met prutsende vingers en touwtjes als stand-in voor een groter commentaar over de aard van collectiviteit in de literaire sector.</p><figure id="4912921a-1123-4ab6-b98e-b5107a7c7c2e"><a href="https://www.de-internet-gids.nl/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">DIG</div></div><div class="bookmark-href"><img src="https://www.de-internet-gids.nl/android-icon-192x192.png" class="icon bookmark-icon"/>https://www.de-internet-gids.nl/</div></div></a></figure><p id="47ca5ab6-12b2-4173-9cb0-18b1288dd42e" class="">
+</p></div></div><blockquote id="bae1106e-60e7-45ad-9ea3-1d10cd9a621f" class="">Dit beeldend onderzoek zie ik nauw aansluiten bij mijn masterproef die ook begaan is met texturen en materialiteit. Wat ik hier verkende, kon ik overbrengen in de visuals binnen en rondom mijn game.</blockquote><p id="3dc71379-d14a-4cf7-9459-76709dc6ce31" class="">
+</p><figure id="6ea46681-29f5-4993-a052-8607bee3c47b" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/totaalbeeld-compleet-backup-part-1.gif"><img style="width:1872px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/totaalbeeld-compleet-backup-part-1.gif"/></a></figure><figure id="01e3b30f-c4b7-4313-9a0f-4862a3b166c9" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/totaalbeeld-compleet-backup-part-2.gif"><img style="width:1872px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/totaalbeeld-compleet-backup-part-2.gif"/></a></figure><hr id="05d65d06-865c-48f9-8e02-2c0b7f63753b"/><div id="2125597c-ecd2-43d7-8b97-18a4572fd79d" class="column-list"><div id="c461ea2b-3138-4469-a6f6-cbb5fd6e150d" style="width:31.25%" class="column"><figure id="23fa7ceb-e5b9-4a60-8aa7-4ab36d6f964d" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2149.jpeg"><img style="width:240px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2149.jpeg"/></a></figure></div><div id="b1dcfbd1-86c1-4bea-84ed-dcb9e00a22d9" style="width:68.75%" class="column"><p id="c48025ce-4a6c-4dd0-b2de-0a0de23b1429" class="">Spelen is een belangrijk onderwerp in Astrids wereld, ze koos dit zelfs als thema voor het woordkunstfestival in Kortrijk. In het artikel pleit ze dat men ruimtes creëert waarin dit mogelijk is, dat advies heb ik ter harte genomen. Dit concept trok ik verder in de presentatie van mijn masterproef op de expo, mijn procesfolio, mijn notion pagina en natuurlijk mijn digitaal landschap zelf.</p><p id="75f115a1-e703-498c-9eb9-33087f0149b7" class="">Om mijn eigen ‘vastgeroeste patronen’ los te laten, verkende ik materialen buiten mijn comfortzone. Ik gebruikte naald en draad in papier in combinatie met pastel en klei. Deze materialen komen samen in stopmotion animaties over omlijnen, verdwijnen, vervormen en breken. Wolken, strakke omheiningen en touwen waren inspiratiebronnen.</p></div></div><div id="ca8c3d46-dd48-47d1-a89a-76a00b68ac65" class="column-list"><div id="19a6c10b-e555-4a1c-b35c-a09af145df7c" style="width:41.666666666666664%" class="column"><figure id="6e3cb966-b8cf-447a-8fdc-8cd36373c17f" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_1970.jpeg"><img style="width:3334px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_1970.jpeg"/></a></figure></div><div id="e170cb5d-9721-4037-ba08-eb6cbead3a52" style="width:25.00000000000001%" class="column"><figure id="de24736c-d28c-45c2-899d-3ae10ccda1b4" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_1954.jpeg"><img style="width:192px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_1954.jpeg"/></a></figure></div><div id="6cfb5f9c-30ec-4e27-b65c-f9dac152c132" style="width:33.33333333333333%" class="column"><p id="27ee0d8b-2533-4e29-912e-db9a488bc4df" class="">
+</p><p id="4041a15b-b80e-4b22-902d-66abd010ffb8" class="">De tekst gaat over touwfiguren en vermeld in situ kunstenaar Fred Sandback. Naald en draad waren een vertrekpunt.</p></div></div><div id="7d004b97-e308-40ba-b614-266e8e4bbc21" class="column-list"><div id="7f28d5f6-5350-4390-aeb5-9bef448b196b" style="width:78.94736842105262%" class="column"><figure id="19814452-a487-4047-af93-5bb10974d2ee" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/flipboekjewolken-ezgif.com-video-to-gif-converter.gif"><img style="width:522.625px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/flipboekjewolken-ezgif.com-video-to-gif-converter.gif"/></a><figcaption>‘ingehouden ademhaling’, klein flipboekje met pastel wolken</figcaption></figure></div><div id="24760dce-a624-4789-a49e-8ecd8cc3f392" style="width:21.05263157894737%" class="column"><figure id="1e5b7261-c585-4e77-8e5f-0ecd7d9bc92b" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2115.jpeg"><img style="width:144px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2115.jpeg"/></a></figure><figure id="340e0b25-fa59-4029-917e-b7c22b5ca0b1" class="image" style="text-align:left"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2333.png"><img style="width:240px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2333.png"/></a></figure></div></div><div id="63ce8e38-9aae-4ee2-b758-7cb17a7e5556" class="column-list"><div id="e8ded0d0-c410-42fc-9bba-817da323d3fc" style="width:62.5%" class="column"><figure id="450c7cdf-9bba-46c9-bd41-8c6ab672440f" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/Untitled%201.png"><img style="width:1260px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/Untitled%201.png"/></a><figcaption>Wolkenzoektocht binnen klei.</figcaption></figure></div><div id="caae50a6-f202-4b05-b08b-1daa156baecf" style="width:37.49999999999999%" class="column"><figure id="2fb187ec-f728-4c08-8b8c-93c881292d16" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2341.jpeg"><img style="width:240px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2341.jpeg"/></a></figure></div></div><div id="3c652339-0160-4b0a-b1f2-3c6ce43ab7d2" class="column-list"><div id="805205c6-be3a-4709-a457-f47bd4c3fdd7" style="width:20.833333333333332%" class="column"><figure id="fea68c9e-0b9f-46c2-b410-86060b64285a" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2332.jpg"><img style="width:240px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/IMG_2332.jpg"/></a></figure></div><div id="2c3b6c39-aef3-4068-8001-d574394a5f04" style="width:41.666666666666664%" class="column"><figure id="24c4a170-2496-4391-ad11-6213952f32d8" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/omheiningwolken-ezgif.com-crop.gif"><img style="width:256.65625px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/omheiningwolken-ezgif.com-crop.gif"/></a></figure></div><div id="64b6deac-f759-495c-ba69-8efa6b157183" style="width:37.500000000000014%" class="column"><p id="7f0cffcd-b60a-4aca-8ecb-0e58ea8abe57" class="">Het afbakenen van ruimtes voor groepen schrijvers maakt het mogelijk om daarin te spelen en experimenteren. Dus: touw als afbakening, wolken en pastel als speelruimte en verbeelding.</p></div></div><div id="8da13140-7e25-4476-8443-ffcfd753643c" class="column-list"><div id="e42623be-ab58-4142-b714-30accc4bf9d5" style="width:50%" class="column"><figure id="f0af84f7-bf2a-4537-a14a-cc05cafb9909" class="image" style="text-align:left"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/wolkuitniets-ezgif.com-video-to-gif-converter.gif"><img style="width:240px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/wolkuitniets-ezgif.com-video-to-gif-converter.gif"/></a><figcaption>Eerste stopmotion experimenten</figcaption></figure></div><div id="a1cc0a05-6052-430a-88ee-9ef8277f49bf" style="width:50.000000000000014%" class="column"><figure id="3f9af5db-9777-46f1-98cc-1a8dfb7208fb" class="image" style="text-align:center"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%201.gif"><img style="width:384px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%201.gif"/></a></figure></div></div><p id="c8fd38d9-2349-497b-993d-a96118533f23" class="">
+</p><div id="187f3bb2-e6bf-4c8c-9131-e9cacccd623f" class="column-list"><div id="9fb439fe-f7ff-477f-8b98-32d267a095cb" style="width:50%" class="column"><figure id="935c8058-63b2-4e6e-82c3-b9047b2b774a" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/anothawolk-ezgif.com-video-to-gif-converter.gif"><img style="width:256.65625px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/anothawolk-ezgif.com-video-to-gif-converter.gif"/></a></figure></div><div id="07386397-d25c-4ed7-879f-f5b6699fe9bc" style="width:50%" class="column"><figure id="11544d34-ce36-47d8-bcf8-59b8c58ee1ed" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/ezgif.com-animated-gif-maker.gif"><img style="width:205.328125px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/ezgif.com-animated-gif-maker.gif"/></a></figure></div></div><figure id="abcddc3f-61ce-427c-8863-ed9945925348" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%202.gif"><img style="width:480px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%202.gif"/></a></figure><figure id="e0cbe1f4-4647-4cb9-acbd-95b57b505098" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/striemendewolk-ezgif.com-video-to-gif-converter.gif"><img style="width:432px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/striemendewolk-ezgif.com-video-to-gif-converter.gif"/></a></figure><figure id="b8139d47-961c-4669-9cf1-959d937017b3" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/brekendewolk-ezgif.com-video-to-gif-converter.gif"><img style="width:600px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/brekendewolk-ezgif.com-video-to-gif-converter.gif"/></a><figcaption>“In elke groep zit een potentie tot bloei, maar ligt ook geweld op de loer.”</figcaption></figure><figure id="7af5e7da-7a35-4cf1-8190-c4053531251d" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%203.gif"><img style="width:384px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%203.gif"/></a></figure><div id="fe78a9a2-f434-4007-8c6f-0f9e1c945e0a" class="column-list"><div id="43dc4b0d-dc53-40db-8bf5-d297e60a0d38" style="width:33.33333333333334%" class="column"><figure id="d6928dc1-d3d1-47f9-8be2-1e0e2c4de3c4" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%204.gif"><img style="width:707.9861450195312px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%204.gif"/></a></figure></div><div id="ad0b0ded-f811-41eb-887d-9c475dda2583" style="width:33.333333333333336%" class="column"><figure id="5f9e77aa-1a24-444c-b787-1aaff194898d" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%205.gif"><img style="width:480px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%205.gif"/></a></figure></div><div id="6997f7bc-bd78-4fbf-b5a0-3b15afd02f8d" style="width:33.33333333333333%" class="column"><figure id="e5d6cd88-3b82-4e4e-a230-2bb7744402fd" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%206.gif"><img style="width:480px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%206.gif"/></a></figure></div></div><figure id="e8c1a46d-f5cd-4d2c-be2b-7249c6fb883b" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/grotewolk-ezgif.com-optimize.gif"><img style="width:600px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/grotewolk-ezgif.com-optimize.gif"/></a></figure><figure id="4bd9c086-36fb-43dd-9364-35407ad5f6ba" class="image" style="text-align:center"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%207.gif"><img style="width:816px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/BrowserPreview_tmp%207.gif"/></a></figure><p id="5baa5cc4-9986-46ae-b7ce-a8c2bb41a5a5" class="">
+</p><figure id="4ba68c70-deab-4317-adeb-1b247b7787d5" class="image"><a href="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/een-kruis-vormt-zich-loop-transparant-trager-met-tussenpauze-en-wolkjes-met-mask-fotos.gif"><img style="width:576px" src="Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/een-kruis-vormt-zich-loop-transparant-trager-met-tussenpauze-en-wolkjes-met-mask-fotos.gif"/></a></figure><p id="10a7b316-b1c0-4dba-920e-c86f4e0219d6" class="">
+</p><p id="0d416110-7163-4018-8be5-f8a9eb56bc6a" class="">
+</p><p id="7c81e2bc-f55a-48c6-8bf6-64e0501ae66e" class="">
+</p><p id="c65cee8a-34da-4ffb-a3aa-c1f667931fcf" class="">
+</p><p id="7195f515-8901-4fac-9320-9fbf25d85a95" class="">
+</p><p id="668b9ae0-29d2-42e7-9605-56b80960b7de" class="">
+</p><p id="50769ea6-7ab5-4953-9755-eb312b63e2fa" class="">
+</p><p id="cce3b635-cf0c-492c-b17f-61ef7f04a83a" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
