@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Dialoog met Astrid Haerens</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: dimgray;
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+
+font-weight: 700;
+font-size: large;
+margin-top: 0;
+margin-bottom: 0.75em;
+}
+
+h1{
+font: 1em sans-serif;
+color: dimgrey
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="befd4fb6-e44a-46ce-a878-44543f7ee59d" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/chw2qsp0g4v40345bxcm11pvvcqn%201.gif"/></div><h1 class="page-title">Dialoog met Astrid Haerens</h1><p class="page-description"></p></header><div class="page-body"><p id="8054265a-b154-4bd8-9158-2c8377f11263" class="">Binnen het kader van mijn stage bij auteur en dichter Astrid Haerens in februari en maart (en eigenlijk ook april) onderzocht ik manieren om samen te werken met een schrijver als beeldende maker. Dit uitte zich in 3 op zichzelf staande manieren:<div class="indented"><ol type="1" id="af90d2f2-d941-4f30-a801-bfd4d421cb19" class="numbered-list" start="1"><li>een experimentele briefwisseling</li></ol><ol type="1" id="abf62345-2a60-41d8-bb54-41a318661ea8" class="numbered-list" start="2"><li>een poëtische publicatie</li></ol><ol type="1" id="ab36cbd4-2f9d-410a-ba97-4e16b3fea592" class="numbered-list" start="3"><li>een beeldessay</li></ol></div></p><p id="1b0ff9f1-0d77-4f61-8a81-10e76e7dca90" class="">Een (digitale) briefwisseling, waarin we relevante thema’s, gedachtenspinsels, persoonlijke anecdotes, schrijvers en beeldende kunstenaars aanhaalden die inhoudelijk interessant zijn voor mijn masterproef. Daarnaast was dit een manier om elkaar te leren kennen via beeld en taal. Ze hielp me bij het schrijven en verfijnen van gedichten en concepten uit mijn project, en coachte me één-op-één. </p><p id="130fa43f-5074-4c8f-966f-dc911bf7113c" class="">Door de brieven kreeg ik een inkijk in wat er door haar hoofd speelde toen ze het gedicht <mark class="highlight-teal"><code><a href="Museum van de mist e649d1ac027744248d3a26ae3b46e7e4.html">Museum van de Mist</a></code></mark> schreef. Rond dit gedicht maakte ik een gelijknamige publicatie, waarin ik speelde met taalspanning en tactiliteit op print. </p><p id="8c33be17-335d-4e95-bb52-411beedfbd50" class="">Ten slotte vroeg Astrid mij om illustraties te maken bij haar essay <mark class="highlight-blue"><code><a href="Over touwfiguren 77eafcf4b8504bb98b779b1262d30738.html">Over touwfiguren</a></code></mark> voor website <a href="https://www.de-internet-gids.nl/">DIG</a>. Deze kans gebruikte ik om verder beeldonderzoek te voeren voor mijn masterproef wat betreft stopmotion.</p><figure id="e649d1ac-0277-4424-8d3a-26ae3b46e7e4" class="link-to-page"><a href="Museum van de mist e649d1ac027744248d3a26ae3b46e7e4.html"><img class="icon" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Museum%20van%20de%20mist%20e649d1ac027744248d3a26ae3b46e7e4/Schermafbeelding_2024-05-31_124832.png"/>Museum van de mist</a></figure><figure id="77eafcf4-b850-4bb9-8b77-9b1262d30738" class="link-to-page"><a href="Over touwfiguren 77eafcf4b8504bb98b779b1262d30738.html"><img class="icon" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Over%20touwfiguren%2077eafcf4b8504bb98b779b1262d30738/preview_beeld_touwfiguren_juist_formaat.png"/>Over touwfiguren</a></figure><blockquote id="2a5af7d6-835f-4b51-ac98-a9880d524bd5" class="">Wat er in die 2-3 maanden kon ontstaan, inspireert mij nog altijd eindeloos. Dit kwam voor mij op een moment in het project waarin ik tegen een muur aanbotste. De stage was niet alleen op een artistiek vlak boeiend, maar ik kon er ook veel persoonlijke betekenis uit halen die me nog lang gaat bijblijven. Toen ze me vertelde dat ik minder onzeker mocht zijn en meer van mezelf mocht laten zien, geloofde ik haar.</blockquote><ul id="eb91dbbd-a4a9-4ff7-8989-90f513ecf469" class="toggle"><li><details open=""><summary><mark class="highlight-gray">Oerhert, Anger’s Family Tree en onze eerste ontmoeting</mark></summary><p id="5f36607d-cbac-4373-9fb8-beacfc57e6bc" class="">Ik kwam voor het eerst in aanraking met het werk van Astrid door ‘Oerhert’. </p><figure id="3f694428-6a7d-418f-a966-56d51c424ce4" class="image" style="text-align:center"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled.png"><img style="width:336px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled.png"/></a><figcaption>Fragment uit dichtbundel ‘Oerhert’.</figcaption></figure><p id="887a79ea-a4e9-4d78-8e94-a8d8fc700a1f" class="">In die bundel herkende ik een benadering waar ik me heel verwant mee voel. Zowel de belichaamde, als filmische aspecten probeer ik op dit moment ook volop te ontwikkelen in mijn eigen werk. Ze weet hoe ze intense en akelige gevoelens kan overbrengen op een verteerbare manier en vertrekt vanuit associaties. Op basis van die bundel heeft ze samen met Mariske Broeckmeyer een experimenteel album gemaakt die de grenzen tussen voordracht en jazz overschrijden.</p><figure id="9bbf952e-b9e3-4464-9488-2a925a85e577"><a href="https://open.spotify.com/album/7iwLJE2ZVYrE4qphGwc17t?si=5KmeStSpQpC9warCo3i4bQ" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Anger&#x27;s Family Tree</div><div class="bookmark-description">Maris · Album · 2024 · 5 songs.</div></div><div class="bookmark-href"><img src="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png" class="icon bookmark-icon"/>https://open.spotify.com/album/7iwLJE2ZVYrE4qphGwc17t?si=5KmeStSpQpC9warCo3i4bQ</div></div><img src="https://i.scdn.co/image/ab67616d0000b273277f3d8e7f587d2e7ee88d35" class="bookmark-image"/></a><figcaption>Album gebaseerd op ‘Oerhert’ in samenwerking met Mariske Broeckmeyer en Jasmijn Lootens.</figcaption></figure><figure id="bec206bf-d007-45b5-957a-4a8ca81389c3"><div class="source"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled.mp4">https://prod-files-secure.s3.us-west-2.amazonaws.com/a3237da1-6b14-41b2-9c23-dd938206922f/3ae06a20-78ab-4633-b600-8b1e2da746a9/Untitled.mp4</a></div><figcaption>Fragment uit ‘This Language Is A Country’, 1 van de 5 tracks.</figcaption></figure><p id="3172c436-ffc6-410f-91f2-88000ed953ea" class="">Na even contact op te nemen gingen we op gesprek over haar werk, mijn masterproef en deze stage. We besloten om een brievenwissel op te starten tijdens de stage waarin we vrij met woord en beeld mijmerden over thema’s uit mijn masterproef, zoals ronddwalen, vage identiteit en constante verandering. Aangezien ze voor periodes in februari en maart in het buitenland moet zijn voor projecten, besloten we om ‘brieven’ eerder op te vatten als experimentele mails. Niet ongelijk mijn masterproef dus, die net als deze correspondentie een vreemde mix wordt van analoge expressie in digitale eindvorm.</p><p id="0ce5071e-59bb-4fc8-8f62-30d2a5d4833f" class="">Ze nodigde me uit om een voorstelling bij te wonen van de immersieve ‘Oerhert’ tournee, deze in cultuurcentrum Mechelen Nona.</p><figure id="5d16a7d5-1b2b-4fee-9929-5f9a35166a62" class="image" style="text-align:center"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%201.png"><img style="width:432px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%201.png"/></a><figcaption>01/02/2024</figcaption></figure><p id="68877391-e1fb-4e9d-87de-2f632eacc964" class=""> Erg onder de indruk en lichtjes geïntimideerd stuurde ik haar mijn eerste digitale brief op:</p></details></li></ul><hr id="8d5463b0-5f44-4c85-bec1-e67771e4ee8d"/><figure id="2fdc1980-d4d9-46a2-b421-81f4d06cc3f5" class="image" style="text-align:right"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%202.png"><img style="width:97px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%202.png"/></a></figure><figure id="95a57ae0-481e-4248-88b9-cc16e5b9e2cc" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_02.48.46.jpeg"><img style="width:192px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_02.48.46.jpeg"/></a></figure><figure id="71465ce2-3460-4d5e-926e-14808bb9432a" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_16.20.32.jpeg"><img style="width:1756px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_16.20.32.jpeg"/></a></figure><figure id="06524c0c-2e36-4fc5-8af5-69e6c3bf0b28" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/chw2qsp0g4v40345bxcm11pvvcqn.gif"><img style="width:222px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/chw2qsp0g4v40345bxcm11pvvcqn.gif"/></a></figure><figure id="4723955a-b255-49a5-811d-9a1a1b080c03" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_16.20.32%201.jpeg"><img style="width:1758px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_16.20.32%201.jpeg"/></a></figure><figure id="e0528400-5762-4ae8-803e-7c111798c654" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_16.20.32%202.jpeg"><img style="width:1736px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_16.20.32%202.jpeg"/></a></figure><figure id="1e236d05-9a8b-4d44-8bf7-1108c50aab38" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_01.08.27.jpeg"><img style="width:576px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_01.08.27.jpeg"/></a></figure><figure id="c984cc75-db15-471a-bd47-3f8ef9746da4" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_02.42.21.jpeg"><img style="width:2299px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_02.42.21.jpeg"/></a></figure><figure id="0b181c21-d508-4624-a0aa-91857c1cf401" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3427.jpeg"><img style="width:576px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3427.jpeg"/></a></figure><figure id="0b7cc0f9-9b22-419e-a077-4aa5a580aea8" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_02.34.45.jpeg"><img style="width:480px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_02.34.45.jpeg"/></a></figure><figure id="972c0203-33e0-4afe-a3c5-c246e3e432bb" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-04_22.35.18.png"><img style="width:528px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-04_22.35.18.png"/></a></figure><figure id="04afef03-262e-4e74-883e-d1d918aba612" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_14.13.41.jpeg"><img style="width:1999px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/2024-02-05_14.13.41.jpeg"/></a></figure><figure id="72b46509-3718-4d25-be1d-e6a345635c97" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3442.jpeg"><img style="width:3744px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3442.jpeg"/></a></figure><figure id="4256dca7-f6a5-435e-9d77-ebf8bde32724" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3449.png"><img style="width:2159px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3449.png"/></a></figure><figure id="bf976a75-c091-481d-bc54-0d19f66d56e7" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3450.gif"><img style="width:479.9999694824219px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3450.gif"/></a></figure><figure id="33bc709d-5803-4eb7-a622-a5522fd7ff18" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3458.png"><img style="width:1766px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3458.png"/></a></figure><div id="4e98194b-7499-4308-af60-9781d1d98adf" class="column-list"><div id="fe608a0e-08c7-47d1-91c3-5a0a8313c2e9" style="width:33.333333333333336%" class="column"><figure id="6ddb17b4-d248-49c7-8dd6-d8fd336c56a0" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3453.jpeg"><img style="width:1794px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3453.jpeg"/></a></figure></div><div id="5858b5b4-25c0-4325-90b0-2f63c52479a9" style="width:33.333333333333336%" class="column"><figure id="d8610414-ca9a-4fc4-8279-451b5d9e239d" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/eigenlijke-animatie-copy-k2.gif"><img style="width:205.32669067382812px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/eigenlijke-animatie-copy-k2.gif"/></a></figure></div><div id="9236d49f-2f7b-41b4-afa0-0c3280cae5ac" style="width:33.33333333333333%" class="column"><figure id="a63a4db3-c262-4558-9b7e-06b9f400df69" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled.gif"><img style="width:205.32669067382812px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled.gif"/></a></figure></div></div><hr id="3b3f8c22-f9cd-4792-8aa2-f3a04255e559"/><figure id="44d058f3-9876-4996-a65c-5f99628163ad" class="image" style="text-align:right"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%203.png"><img style="width:90px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%203.png"/></a></figure><figure id="5cd065b3-fabe-4d8c-8982-0d1df1e66175" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Schermafbeelding_2024-06-07_002212.png"><img style="width:998px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Schermafbeelding_2024-06-07_002212.png"/></a></figure><figure id="2e778702-baf1-4a6f-a9bc-f15a76ecc096" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Schermafbeelding_2024-06-07_002239.png"><img style="width:1000px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Schermafbeelding_2024-06-07_002239.png"/></a></figure><figure id="4e8b93de-0f21-4cdf-8e9c-c0b14d309422" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Schermafbeelding_2024-06-07_002326.png"><img style="width:988px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Schermafbeelding_2024-06-07_002326.png"/></a></figure><figure id="49005e44-789a-4d91-ab01-0796c4a9a5a9" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Schermafbeelding_2024-06-07_002354.png"><img style="width:994px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Schermafbeelding_2024-06-07_002354.png"/></a></figure><div id="e34e67bc-71a2-438d-9854-32f936d9c62e" class="column-list"><div id="22ce47e7-1678-4858-92c6-d13c79b13fb0" style="width:56.25%" class="column"><figure id="3fa8ba4e-0c29-4b80-9fff-a52266b44a66" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/20240213_185018.jpg"><img style="width:3024px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/20240213_185018.jpg"/></a></figure><p id="ef42ae3b-d779-4160-a138-47abd064b20c" class="">
+</p></div><div id="6cbc258e-c661-42a7-951d-d71428ce1167" style="width:43.75%" class="column"><figure id="fab7f951-73e4-49b0-957b-9699191308b2" class="image" style="text-align:left"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/VideozondertitelGemaaktmetClipchamp9-ezgif.com-video-to-gif-converter.gif"><img style="width:264px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/VideozondertitelGemaaktmetClipchamp9-ezgif.com-video-to-gif-converter.gif"/></a></figure></div></div><hr id="d5fe4513-56e1-418c-8602-c74c541d270a"/><figure id="a741652f-3a70-4971-85a7-ce73067bb3f5" class="image" style="text-align:right"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%204.png"><img style="width:98px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%204.png"/></a></figure><p id="94b2a351-e60a-4d0a-aa07-3239eb46afa1" class="">Dag Astrid</p><p id="233a295e-977d-4a7b-9609-04ceecae4dd9" class="">Heel erg bedankt voor jouw brief. Je associaties zijn prikkelend en hielpen me om een stroomversnelling mee te maken in mijn proces.</p><p id="1a78c915-949d-4255-aca1-44e047782e84" class="">Wat je nog schreef over het pathetische zei je niet in café Novo, maar op de één of andere manier kon ik die golflengte wel opvangen. Gerelateerd aan dat innerlijk conflict met dit wilde westen:</p><p id="b99df785-8794-4252-8855-d8f3751110b6" class="">Je sloeg de nagel op de kop met je analyse van de beelden uit mijn vorige brief. Wanneer ik iets maak uit een oprechte plaats, duiken die donkere vragen altijd op. Verwrongen schimmen uit het verleden waar ik herhaaldelijk aan ben blootgesteld geweest, die ik sommige dagen (en vooral nachten) uit mijn netvlies moet verdrijven. De meesten zijn samen met mij opgegroeid. Je zal dus mijn beslissing om deze schimmen zich te laten voortbewegen in mijn digitaal ‘wasteland’ wel begrijpen.</p><figure id="a94b9a88-63e4-4586-ba11-8b9e57ac89a3" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed.gif"><img style="width:240px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed.gif"/></a></figure><p id="2e28c48b-e165-488c-a02d-76d244e30b88" class="">Ik heb tussen je antwoord en nu mezelf voor een week kunnen afzonderen van ’t stad. In Lille (België) raak ik normaal snel overprikkeld, maar toen had ik een goede balans tussen genoeg isolatie om gedisciplineerd te kunnen voortwerken en sociaal contact met mijn broer en moeder.</p><p id="4e7c7828-3fb1-4b86-91d5-c87b7d08adb8" class="">Ik heb er ook twee films gekeken; Eraserhead, een vroeg werk van David Lynch, en Persepolis, een animatiefilm gebaseerd op de gelijknamige graphic novel door Marjane Satrapi waar ik een aantal jaren terug heel hard door geraakt was. Het ene vond ik vooral prikkelend door de vertelstijl, het andere kon me meepikken door het diasporische thema en de gevoelens die als gevolg optreden. Die tweede film deed me ook denken aan het werk van Ocean Vuong, waar ik dringend nog eens iets van moet lezen omdat het te veel blijft ronddobberen in mijn hoofd zonder dat ik actie onderneem.</p><p id="8d030689-334b-49b9-ba02-225b3a7acc9f" class="">Ik heb er ook wat geëxperimenteerd met soundscapes, waar mijn broer heel hard mee gelachen heeft dus die laat ik je nu (nog) niet horen. (Met hem gaat het dus meer dan goed.)</p><p id="8f38f960-d82c-4583-b069-c4692a5ac73d" class="">Uit je vorige brief bleef het idee van de mist nazinderen. Interessant hoe mist zoals mijn schimmen dat ook goed kunnen, het zicht kan vertroebelen. Ik dacht aan hoe ik dit zou kunnen verwerken in mijn spel, hier is een losse schets van wat het zou kunnen zijn:</p><p id="3ffb5762-9876-43a4-858e-3107123b89a7" class="">Mogelijk sluipt de speler op podium net wanneer ik de rookmachine goed heb laten draaien en de scène allesbehalve helder is.</p><figure id="6f5034ba-d1f8-44c3-ad6e-5bdb83836eea" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%201.gif"><img style="width:425.9942932128906px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%201.gif"/></a></figure><p id="d54790ce-e357-4e54-8dd3-060c0e196d94" class="">
+</p><p id="2bdc1354-bd88-4978-93b6-f39cc43e2067" class="">Schimmen duiken op vanuit de coulissen terwijl een souffleur ongrijpbare tekst naar je hoofd slingert.</p><figure id="5e1f9442-6bd5-4a02-be64-ff9f27a7f579" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%205.png"><img style="width:343px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/Untitled%205.png"/></a></figure><p id="088e1f06-72d1-496a-9cf0-0ba6786033f7" class="">Plankenkoorts. Ik denk dat je enkel door interactie met je medespelers het stuk kan redden.</p><figure id="7a90421d-e8c4-48d9-b29a-56a555d492f4" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed.gif"><img style="width:240px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed.gif"/></a></figure><p id="edca1d9f-5064-4dee-8b95-f9f3e6c0dc09" class="">Je moet zelf zo hard stralen dat wanneer de spots je opvangen, je één wordt met het licht.</p><figure id="aac6b1da-21dc-4653-b656-8240ecf59bf9" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed.png"><img style="width:260px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed.png"/></a></figure><p id="ce313881-bb90-47db-8eda-5e76972d046c" class="">Het lichaam dat bij aanvang zo loom aanvoelde lost zichzelf hoe langer, hoe meer op in digitale ruimte.</p><p id="ea497749-2d0f-49a6-a603-f134d2889f8d" class="">
+</p><figure id="69587d83-96f7-43e8-a185-53675fcc84d6" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%202.gif"><img style="width:288px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%202.gif"/></a></figure><p id="dfecfc0b-69d8-4442-b644-67dc63a3552b" class="">Zoals je jezelf kan verliezen in papier, kan je je ook laten opslokken door het scherm.</p><p id="c35df108-2f49-4d62-af79-455571ab4859" class="">Ik stel een soort verloop voor. Wanneer je ronddoolt kom je een aantal bepaalde schimmen of vreemde figuren tegen. Die bevinden zich in een soort scène of omgeving die jij kan observeren. Jij kan ze nooit redden, maar wanneer je ze benadert tasten ze je visueel uiterlijk aan. Een figuur dat bestaat uit warrige potloodlijnen, zorgt ervoor dat jij daar ook uit bestaat. Een andere schim van vloeiende inkt, maakt dat jij ook vloeibaar begint aan te voelen. Bij elke ontmoeting met zo’n personage of object wordt je net wat transparanter en ga je meer en meer op in de leegte tot er niets meer van je overschiet.</p><p id="e0875867-78cf-4829-a15d-a2bc3141bff2" class="">Een misschien cliché voorbeeld dat ik nu even ga ondermijnen door het heel duidelijk uit te leggen is een stuk ruimte in de leegte die plots druk bezet is door sterk afgelijnde figuren van eenzelfde soort.</p><div id="f304f4ee-6f3c-4718-ac30-011e9b429a25" class="column-list"><div id="45b55815-709c-46ac-b9cb-ded3b96c006a" style="width:50%" class="column"><figure id="2e5b1e9e-485c-41c0-9b9a-104df3cfc84a" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%201.png"><img style="width:355px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%201.png"/></a></figure></div><div id="85f2c84d-abc8-4598-8250-b3fc468bdad9" style="width:50%" class="column"><figure id="cf72bd34-d7b5-4980-9a4d-eee41ec164b9" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%203.gif"><img style="width:330.9942932128906px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%203.gif"/></a></figure></div></div><p id="4836a208-f4e8-438f-bdab-21ecd109b70f" class="">
+</p><p id="222c22ba-fcd4-4350-9f58-36528ffcc549" class="">Ik zou die ruimte meerdere ‘huisjes’ geven. Hoe die er uit zullen zien weet ik nog niet, maar ik denk wel aan satellietschotels. Je zou ze allemaal vanbinnen kunnen verkennen. Wanneer je 1 bepaalde woning binnenkomt ontdek je een figuur die duidelijk van dezelfde soort is maar zich visueel sterk onderscheidt van de rest. Dit zou ik doen door met houtskool te werken in plaats van die zwarte lijnen en de figuur vreemd te doen verspringen, zoals de eerste ‘schim’ in deze brief.</p><div id="6a3a0d9a-31b4-45a1-b743-959cf8104d23" class="column-list"><div id="28e04833-8f30-44d2-8c7e-2a63d9447b12" style="width:50%" class="column"><figure id="0c07db78-95d2-436c-ac6b-561fbb6c0600" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%202.png"><img style="width:336px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%202.png"/></a></figure></div><div id="231a5426-65fc-47fd-a0b8-4510179601a1" style="width:50%" class="column"><figure id="e881e205-bf95-401a-995f-4579a4c54fd2" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%204.gif"><img style="width:330.9942932128906px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%204.gif"/></a></figure></div></div><p id="09512c41-43b8-4edc-bd3e-0872fbfe0c2a" class="">
+</p><p id="2a130a14-6552-4eb7-8b09-eea272c783da" class="">De krassen op de muren, de verassing en het contrast van de sfeer binnen deze woning en de sfeer erbuiten en in andere woningen doet misschien speculeren over deze geïsoleerde figuur die hier niet thuishoort. Een vrij illustratief miniverhaal waarop je toevallig zal kunnen stuiten misschien?</p><p id="af2913c8-8d22-48b2-a032-3c326ca2b24c" class="">Ik denk wel na over wat je schreef over een ‘cliché’. Ik geloof dat deze bepaalde situatieschets daar nog onder valt en nog veel van vorm gaat veranderen.</p><p id="1ab3221e-ffa5-4cf5-b4a5-500735c584f6" class="">Misschien dat het wel een stap is in de juiste richting dat zaken concreter worden, zoals het verloop dat ik voorstelde. Er is toch echt wel een fijne lijn tussen én open én specifiek genoeg, hopelijk vind ik die snel.</p><p id="1b649d90-d23c-4cd6-b6b8-d5465da6fbc4" class="">Benieuwd naar waar je aan denkt als je dit zoal leest.</p><p id="4a1e0f69-8984-40c2-81df-4ecbae78848e" class="">Hoe was het eigenlijk in Beacon?</p><p id="9c74e5a7-caba-42b2-88b8-38b70e495b82" class="">Ik wist niet dat ze daar het nieuwe seizoen van winterbeelden opnamen, ziet er wel goed uit!</p><figure id="d40a2945-ec9a-4ac7-bfdf-2465b6765cbb" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%205.gif"><img style="width:240px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%205.gif"/></a></figure><p id="6ff333a3-d351-4a51-aaff-1852e2fb7bc4" class="">Heeft de sneeuw je geholpen met schrijven aan je roman? Wat heb je daar nog bezocht? Hoe voelt het nu om terug te zijn? Zijn er al veel knopen doorgehakt voor het mementofestival? Waar ben je nog mee bezig? Wil je nog naar de Panne (want dan betaal ik sowieso de gas mee)?</p><p id="2ef0340e-0538-446a-980d-0ee91d238cd4" class="">Warme groeten terug</p><p id="5d7d6273-c118-46e0-9204-554a03c45ac0" class="">Noura</p><p id="70aac767-174a-4a1c-a55d-4d58d725069a" class="">PS Bedankt om deze verbinding met mij aan te gaan</p><figure id="8b23c1ed-baea-4667-953d-8ff793ab3e3f" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%203.png"><img style="width:144px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/unnamed%203.png"/></a></figure><p id="ea8d57bd-d5b6-451b-9bff-7b0ab22ec7a7" class="">
+</p><hr id="2ed48449-4bd8-4bbd-8195-fe66373d33c7"/><figure id="89a3670e-8cc4-4088-a03b-1a38585d112b" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1187.jpeg"><img style="width:720px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1187.jpeg"/></a></figure><figure id="a32df2a5-8b0c-47ba-81a3-e86d15d3f1d7" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1188.jpeg"><img style="width:1125px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1188.jpeg"/></a></figure><figure id="5d334316-d1d1-4eb9-b336-9af743a0e11d" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1189.jpeg"><img style="width:1125px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1189.jpeg"/></a></figure><figure id="47d91d4d-08d7-4df8-8617-72be40b142b3" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1190.jpeg"><img style="width:1125px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1190.jpeg"/></a></figure><hr id="3f5b66ed-15d5-4409-a858-4e547cd6f75a"/><p id="73f8050d-6f97-464a-9b8c-416d3c05d0ab" class="">
+</p><figure id="945d68f7-049e-41cd-ba66-ec5f20191c9e" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1191.jpeg"><img style="width:1125px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_1191.jpeg"/></a></figure><p id="9c9cf4f2-5fe0-4b7d-b17f-99bec9997e60" class="">
+</p><figure id="afa378cf-c0ef-4d41-bc64-9cb4a123790d" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/1717711945312-4a6776d9-f221-4dc9-b912-0b24c7913a8d_1.jpg"><img style="width:724px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/1717711945312-4a6776d9-f221-4dc9-b912-0b24c7913a8d_1.jpg"/></a></figure><figure id="1edc25dd-a62a-4b97-8788-b4bae5674242" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/1717711945312-4a6776d9-f221-4dc9-b912-0b24c7913a8d_2.jpg"><img style="width:724px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/1717711945312-4a6776d9-f221-4dc9-b912-0b24c7913a8d_2.jpg"/></a></figure><figure id="055f3155-45b3-4145-936a-4b1fce04b881" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/1717711945312-4a6776d9-f221-4dc9-b912-0b24c7913a8d_3.jpg"><img style="width:724px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/1717711945312-4a6776d9-f221-4dc9-b912-0b24c7913a8d_3.jpg"/></a></figure><figure id="b97ebc58-a147-47b2-a76c-dbafcc6af926" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/1717711945312-4a6776d9-f221-4dc9-b912-0b24c7913a8d_4.jpg"><img style="width:724px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/1717711945312-4a6776d9-f221-4dc9-b912-0b24c7913a8d_4.jpg"/></a></figure><figure id="ff30f04c-692f-4bf0-aea4-56f62f2051f0" class="image"><a href="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3611.jpg"><img style="width:432px" src="Dialoog%20met%20Astrid%20Haerens%20befd4fb6e44a46cea87844543f7ee59d/IMG_3611.jpg"/></a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
